@@ -2,6 +2,7 @@ package main
 
 import input as tfplan
 import data.cost_centers as cost_centers
+import future.keywords.in
 
 mandatory_tags := {
 	"Owner",
@@ -9,6 +10,7 @@ mandatory_tags := {
 	"AutomationEnabled",
 }
 
+# Missing Tags
 deny[msg] {
 	resource := tfplan.resource_changes[_]
 	resource_tags := {t | some t; resource.change.after.tags[t]}
@@ -18,6 +20,7 @@ deny[msg] {
 	msg := sprintf("resource %v is missing tags: %s", [resource.address, missing_tags])
 }
 
+# Cost Center
 deny[msg] {
 	resource := tfplan.resource_changes[_]
 	cost_center := resource.change.after.tags["CostCenter"]
@@ -31,10 +34,11 @@ is_valid_cost_center(x) {
 }
 
 
-#deny[msg] {
-#    msg := sprintf("Swag %v", [cost_centers])
-#}
+# Automation
+deny[msg] {
+	resource := tfplan.resource_changes[_]
+	yn := resource.change.after.tags["AutomationEnabled"]
+    not yn in ["yes", "no"]
 
-#deny[msg] {
-#          msg := sprintf("Plan %v", [tfplan])
-#}
+	msg := sprintf("resource %v has unknown AutomationEnabled value: %s. Should be 'yes' or 'no'", [resource.address, yn])
+}

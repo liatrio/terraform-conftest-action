@@ -4,8 +4,7 @@ resource "azurerm_resource_group" "rg" {
 
   tags = {
     CostCenter        = "Security Guild"
-    # Omit the Owner tag
-    # Owner             = "someone@liatrio.com"
-    AutomationEnabled = "yes"
+    Owner             = "someone@liatrio.com"
+    AutomationEnabled = "true" # Should be "yes" or "no"
   }
 }
