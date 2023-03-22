@@ -1,5 +1,5 @@
 package main
 
 allow {
-    count(not_allow) == 0
+	count(not_allow) == 0
 }

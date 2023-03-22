@@ -4,5 +4,3 @@ plan.json: plan.out
 plan.out: *.tf
 	terraform init
 	terraform plan -out $@
-
-
