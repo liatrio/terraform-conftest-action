@@ -6,7 +6,7 @@ import future.keywords.in
 import input as tfplan
 
 # Convert the list to a set
-mandatory_tags := { x | x = mandatory_tags_list[_] }
+mandatory_tags := {x | x = mandatory_tags_list[_]}
 
 # This DOES NOT WORK
 # allow {
@@ -15,7 +15,7 @@ mandatory_tags := { x | x = mandatory_tags_list[_] }
 
 # Missing Tags
 not_allow[msg] {
-    deny_missing_tags[msg]
+	deny_missing_tags[msg]
 }
 
 deny_missing_tags[msg] {
@@ -27,10 +27,9 @@ deny_missing_tags[msg] {
 	msg := sprintf("resource %v is missing tags: %s", [resource.address, missing_tags])
 }
 
-
 # Cost Center
 not_allow[msg] {
-    deny_cost_center[msg]
+	deny_cost_center[msg]
 }
 
 deny_cost_center[msg] {
@@ -43,12 +42,12 @@ deny_cost_center[msg] {
 
 # Automation
 not_allow[msg] {
-    deny_automation_enabled_yesno[msg]
+	deny_automation_enabled_yesno[msg]
 }
 
 deny_automation_enabled_yesno[msg] {
 	resource := tfplan.resource_changes[_]
-	yn := resource.change.after.tags["AutomationEnabled"]
+	yn := resource.change.after.tags.AutomationEnabled
 	not yn in ["yes", "no"]
 
 	msg := sprintf("resource %v has unknown AutomationEnabled value: %s. Should be 'yes' or 'no'", [resource.address, yn])
