@@ -9,5 +9,5 @@ Or, with `docker`,
 
 ``` sh
 docker build . -t terraform-conftest
-docker run terraform-conftest test - < plan.json
+docker run -i terraform-conftest test - < plan.json
 ```
