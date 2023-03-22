@@ -1,5 +1,5 @@
 verify:
-	conftest verify -d data/*
+	conftest verify -d policy/data/
 
 fmt:
 	opa fmt -w policy/*
