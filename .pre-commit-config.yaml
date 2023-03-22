@@ -14,4 +14,4 @@ repos:
     - id: conftest-test
       files: tests/valid/.*\.json$
     - id: conftest-verify
-      args: ['--data', 'data']
+      args: ['--data', 'policy/data']

@@ -1,9 +1,9 @@
 package main
 
-#test_valid {
-#	cfg := parse_config_file("../tests/valid/plan.json")
-#	allow with input as cfg
-#}
+test_valid {
+	cfg := parse_config_file("../tests/valid/plan.json")
+	allow with input as cfg
+}
 
 test_cost_center {
 	cfg := parse_config_file("../tests/cost_center_typo/plan.json")
