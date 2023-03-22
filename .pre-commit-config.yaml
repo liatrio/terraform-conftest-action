@@ -1,0 +1,17 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-json
+      - id: check-added-large-files
+      - id: check-yaml
+  - repo: https://github.com/anderseknert/pre-commit-opa
+    rev: v1.5.1
+    hooks:
+    - id: opa-fmt
+    - id: conftest-test
+      files: tests/valid/.*\.json$
+    - id: conftest-verify
+      args: ['--data', 'data']
