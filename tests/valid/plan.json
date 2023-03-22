@@ -1,0 +1,105 @@
+{
+  "format_version": "1.1",
+  "terraform_version": "1.3.7",
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "azurerm_resource_group.rg",
+          "mode": "managed",
+          "type": "azurerm_resource_group",
+          "name": "rg",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "location": "northcentralus",
+            "name": "example-rg",
+            "tags": {
+              "AutomationEnabled": "yes",
+              "CostCenter": "Security Guild",
+              "Owner": "someone@liatrio.com"
+            },
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "tags": {}
+          }
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "azurerm_resource_group.rg",
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "rg",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "location": "northcentralus",
+          "name": "example-rg",
+          "tags": {
+            "AutomationEnabled": "yes",
+            "CostCenter": "Security Guild",
+            "Owner": "someone@liatrio.com"
+          },
+          "timeouts": null
+        },
+        "after_unknown": {
+          "id": true,
+          "tags": {}
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "tags": {}
+        }
+      }
+    }
+  ],
+  "configuration": {
+    "provider_config": {
+      "azurerm": {
+        "name": "azurerm",
+        "full_name": "registry.terraform.io/hashicorp/azurerm",
+        "version_constraint": ">= 3.19.1",
+        "expressions": {
+          "features": [
+            {}
+          ]
+        }
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "azurerm_resource_group.rg",
+          "mode": "managed",
+          "type": "azurerm_resource_group",
+          "name": "rg",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "location": {
+              "constant_value": "northcentralus"
+            },
+            "name": {
+              "constant_value": "example-rg"
+            },
+            "tags": {
+              "constant_value": {
+                "AutomationEnabled": "yes",
+                "CostCenter": "Security Guild",
+                "Owner": "someone@liatrio.com"
+              }
+            }
+          },
+          "schema_version": 0
+        }
+      ]
+    }
+  }
+}
