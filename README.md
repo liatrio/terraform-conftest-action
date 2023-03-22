@@ -3,4 +3,12 @@ A collection of [rego](https://www.openpolicyagent.org/docs/latest/policy-langua
 
 Assuming you have the ability to capture a plan as json:
 
-`conftest test plan.json`
+`conftest test -d policy/data plan.json`
+
+Or, with `docker`, 
+
+``` sh
+docker build . -t terraform-conftest
+docker run terraform-conftest < plan.json
+```
+

@@ -1,18 +1,12 @@
 package main
 
 import data.cost_centers as cost_centers
+import data.mandatory_tags as mandatory_tags_list
 import future.keywords.in
 import input as tfplan
 
-mandatory_tags := {
-	"Owner",
-	"CostCenter",
-	"AutomationEnabled",
-}
-
-allow {
-    deny == set()
-}
+# Convert the list to a set
+mandatory_tags := { x | x = mandatory_tags_list[_] }
 
 # This DOES NOT WORK
 # allow {
@@ -20,7 +14,7 @@ allow {
 # }
 
 # Missing Tags
-deny[msg] {
+not_allow[msg] {
     deny_missing_tags[msg]
 }
 
@@ -35,7 +29,7 @@ deny_missing_tags[msg] {
 
 
 # Cost Center
-deny[msg] {
+not_allow[msg] {
     deny_cost_center[msg]
 }
 
@@ -48,7 +42,7 @@ deny_cost_center[msg] {
 }
 
 # Automation
-deny[msg] {
+not_allow[msg] {
     deny_automation_enabled_yesno[msg]
 }
 
