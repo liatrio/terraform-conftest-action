@@ -1,7 +1,7 @@
 package main
 
-test_valid {
-	cfg := parse_config_file("../tests/valid/plan.json")
+test_valid_tags {
+	cfg := parse_config_file("../tests/valid_tags/plan.json")
 	allow with input as cfg
 }
 

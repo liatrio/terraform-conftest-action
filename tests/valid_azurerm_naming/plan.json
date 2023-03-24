@@ -1,0 +1,1379 @@
+{
+  "format_version": "1.1",
+  "terraform_version": "1.3.7",
+  "variables": {
+    "tags": {
+      "value": {
+        "AutomationEnabled": "yes",
+        "CostCenter": "Security Guild",
+        "Owner": "someone@liatrio.com"
+      }
+    }
+  },
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "azurerm_linux_virtual_machine.example",
+          "mode": "managed",
+          "type": "azurerm_linux_virtual_machine",
+          "name": "example",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "additional_capabilities": [],
+            "admin_password": null,
+            "admin_ssh_key": [
+              {
+                "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/zDzi+Dz+HFena/JARjUOOBQX+EDvYY4UdjmHXFPbOyfJ/AQynBiKx9MESNJ0waZ1IHbXIZyf83DTU8UBfgTAMvH4r02HreSRKiM1bJdcw3l8x4/OPht525GjtzT0K0pWyycdfjMCz+ulJ3oVXWakP02VIuJe/vJfG8v5byi1lBNXFHCoDDUguoFxAtoo3XGd/prCYZKGBx0zVRcRhzNz0UJ6yJwecNH0SbRh5jl/IJknLAXIi+Wt5mvnY1ebWF3uHnXdSP71XnmzKgPnCm6zOwtRQdPEfnruLMiEjQeFZfU2bedy83x1hBijgizgx2Duwh0wiCGe2J4zVUItiRPtsjtOEAEW3ANZzr8KQDMQ27RZ5k/oTR4spjgTRYk1GBgXHc6CHZSKXYqHEecOmSgzqgsVLVCK7jzkhF0A7L0X7Gex4k7lcKouDksmjvrXVJQW/FdYxfx7qnvTqyb/oIVpk81k5wxks3M1WCbmIEMma+WR4LxC0LCLaIsdsu75DK8= blair@Blairs-MacBook-Pro.local\n",
+                "username": "adminuser"
+              }
+            ],
+            "admin_username": "adminuser",
+            "allow_extension_operations": true,
+            "availability_set_id": null,
+            "boot_diagnostics": [],
+            "capacity_reservation_group_id": null,
+            "custom_data": null,
+            "dedicated_host_group_id": null,
+            "dedicated_host_id": null,
+            "disable_password_authentication": true,
+            "edge_zone": null,
+            "encryption_at_host_enabled": null,
+            "eviction_policy": null,
+            "extensions_time_budget": "PT1H30M",
+            "gallery_application": [],
+            "identity": [],
+            "license_type": null,
+            "location": "northcentralus",
+            "max_bid_price": -1,
+            "name": "vm-dev-northcentralus-project-description",
+            "os_disk": [
+              {
+                "caching": "ReadWrite",
+                "diff_disk_settings": [],
+                "disk_encryption_set_id": null,
+                "secure_vm_disk_encryption_set_id": null,
+                "security_encryption_type": null,
+                "storage_account_type": "Standard_LRS",
+                "write_accelerator_enabled": false
+              }
+            ],
+            "patch_assessment_mode": "ImageDefault",
+            "patch_mode": "ImageDefault",
+            "plan": [],
+            "platform_fault_domain": -1,
+            "priority": "Regular",
+            "provision_vm_agent": true,
+            "proximity_placement_group_id": null,
+            "resource_group_name": "rg-dev-northcentralus-project-description",
+            "secret": [],
+            "secure_boot_enabled": null,
+            "size": "Standard_F2",
+            "source_image_id": null,
+            "source_image_reference": [
+              {
+                "offer": "UbuntuServer",
+                "publisher": "Canonical",
+                "sku": "16.04-LTS",
+                "version": "latest"
+              }
+            ],
+            "tags": {
+              "AutomationEnabled": "yes",
+              "CostCenter": "Security Guild",
+              "Owner": "someone@liatrio.com"
+            },
+            "timeouts": null,
+            "user_data": null,
+            "virtual_machine_scale_set_id": null,
+            "vtpm_enabled": null,
+            "zone": null
+          },
+          "sensitive_values": {
+            "additional_capabilities": [],
+            "admin_ssh_key": [
+              {}
+            ],
+            "boot_diagnostics": [],
+            "gallery_application": [],
+            "identity": [],
+            "network_interface_ids": [],
+            "os_disk": [
+              {
+                "diff_disk_settings": []
+              }
+            ],
+            "plan": [],
+            "private_ip_addresses": [],
+            "public_ip_addresses": [],
+            "secret": [],
+            "source_image_reference": [
+              {}
+            ],
+            "tags": {},
+            "termination_notification": []
+          }
+        },
+        {
+          "address": "azurerm_managed_disk.disk",
+          "mode": "managed",
+          "type": "azurerm_managed_disk",
+          "name": "disk",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 1,
+          "values": {
+            "create_option": "Empty",
+            "disk_access_id": null,
+            "disk_encryption_set_id": null,
+            "disk_size_gb": 1,
+            "edge_zone": null,
+            "encryption_settings": [],
+            "gallery_image_reference_id": null,
+            "hyper_v_generation": null,
+            "image_reference_id": null,
+            "location": "northcentralus",
+            "name": "disk-dev-northcentralus-project-description",
+            "network_access_policy": null,
+            "on_demand_bursting_enabled": null,
+            "os_type": null,
+            "public_network_access_enabled": true,
+            "resource_group_name": "rg-dev-northcentralus-project-description",
+            "secure_vm_disk_encryption_set_id": null,
+            "security_type": null,
+            "source_resource_id": null,
+            "storage_account_id": null,
+            "storage_account_type": "Standard_LRS",
+            "tags": {
+              "AutomationEnabled": "yes",
+              "CostCenter": "Security Guild",
+              "Owner": "someone@liatrio.com"
+            },
+            "timeouts": null,
+            "trusted_launch_enabled": null,
+            "upload_size_bytes": null,
+            "zone": null
+          },
+          "sensitive_values": {
+            "encryption_settings": [],
+            "tags": {}
+          }
+        },
+        {
+          "address": "azurerm_network_interface.example",
+          "mode": "managed",
+          "type": "azurerm_network_interface",
+          "name": "example",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "edge_zone": null,
+            "enable_accelerated_networking": false,
+            "enable_ip_forwarding": false,
+            "ip_configuration": [
+              {
+                "name": "internal",
+                "private_ip_address_allocation": "Dynamic",
+                "private_ip_address_version": "IPv4",
+                "public_ip_address_id": null
+              }
+            ],
+            "location": "northcentralus",
+            "name": "example-nic",
+            "resource_group_name": "rg-dev-northcentralus-project-description",
+            "tags": {
+              "AutomationEnabled": "yes",
+              "CostCenter": "Security Guild",
+              "Owner": "someone@liatrio.com"
+            },
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "applied_dns_servers": [],
+            "dns_servers": [],
+            "ip_configuration": [
+              {}
+            ],
+            "private_ip_addresses": [],
+            "tags": {}
+          }
+        },
+        {
+          "address": "azurerm_network_security_group.example",
+          "mode": "managed",
+          "type": "azurerm_network_security_group",
+          "name": "example",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "location": "northcentralus",
+            "name": "nsg-dev-northcentralus-project-description",
+            "resource_group_name": "rg-dev-northcentralus-project-description",
+            "security_rule": [
+              {
+                "access": "Allow",
+                "description": "",
+                "destination_address_prefix": "*",
+                "destination_address_prefixes": [],
+                "destination_application_security_group_ids": [],
+                "destination_port_range": "*",
+                "destination_port_ranges": [],
+                "direction": "Inbound",
+                "name": "test123",
+                "priority": 100,
+                "protocol": "Tcp",
+                "source_address_prefix": "*",
+                "source_address_prefixes": [],
+                "source_application_security_group_ids": [],
+                "source_port_range": "*",
+                "source_port_ranges": []
+              }
+            ],
+            "tags": {
+              "AutomationEnabled": "yes",
+              "CostCenter": "Security Guild",
+              "Owner": "someone@liatrio.com"
+            },
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "security_rule": [
+              {
+                "destination_address_prefixes": [],
+                "destination_application_security_group_ids": [],
+                "destination_port_ranges": [],
+                "source_address_prefixes": [],
+                "source_application_security_group_ids": [],
+                "source_port_ranges": []
+              }
+            ],
+            "tags": {}
+          }
+        },
+        {
+          "address": "azurerm_resource_group.rg",
+          "mode": "managed",
+          "type": "azurerm_resource_group",
+          "name": "rg",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "location": "northcentralus",
+            "name": "rg-dev-northcentralus-project-description",
+            "tags": {
+              "AutomationEnabled": "yes",
+              "CostCenter": "Security Guild",
+              "Owner": "someone@liatrio.com"
+            },
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "tags": {}
+          }
+        },
+        {
+          "address": "azurerm_storage_account.example",
+          "mode": "managed",
+          "type": "azurerm_storage_account",
+          "name": "example",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 3,
+          "values": {
+            "account_kind": "StorageV2",
+            "account_replication_type": "GRS",
+            "account_tier": "Standard",
+            "allow_nested_items_to_be_public": true,
+            "allowed_copy_scope": null,
+            "azure_files_authentication": [],
+            "cross_tenant_replication_enabled": true,
+            "custom_domain": [],
+            "customer_managed_key": [],
+            "default_to_oauth_authentication": false,
+            "edge_zone": null,
+            "enable_https_traffic_only": true,
+            "identity": [],
+            "immutability_policy": [],
+            "infrastructure_encryption_enabled": false,
+            "is_hns_enabled": false,
+            "location": "northcentralus",
+            "min_tls_version": "TLS1_2",
+            "name": "stodevnorthcentralusxy",
+            "nfsv3_enabled": false,
+            "public_network_access_enabled": true,
+            "queue_encryption_key_type": "Service",
+            "resource_group_name": "rg-dev-northcentralus-project-description",
+            "sas_policy": [],
+            "sftp_enabled": false,
+            "shared_access_key_enabled": true,
+            "static_website": [],
+            "table_encryption_key_type": "Service",
+            "tags": {
+              "AutomationEnabled": "yes",
+              "CostCenter": "Security Guild",
+              "Owner": "someone@liatrio.com"
+            },
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "azure_files_authentication": [],
+            "blob_properties": [],
+            "custom_domain": [],
+            "customer_managed_key": [],
+            "identity": [],
+            "immutability_policy": [],
+            "network_rules": [],
+            "queue_properties": [],
+            "routing": [],
+            "sas_policy": [],
+            "share_properties": [],
+            "static_website": [],
+            "tags": {}
+          }
+        },
+        {
+          "address": "azurerm_subnet.example",
+          "mode": "managed",
+          "type": "azurerm_subnet",
+          "name": "example",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "address_prefixes": [
+              "10.0.2.0/24"
+            ],
+            "delegation": [],
+            "name": "snet-dev-northcentralus-project-description",
+            "resource_group_name": "rg-dev-northcentralus-project-description",
+            "service_endpoint_policy_ids": null,
+            "service_endpoints": null,
+            "timeouts": null,
+            "virtual_network_name": "vnet-dev-northcentralus-project-description"
+          },
+          "sensitive_values": {
+            "address_prefixes": [
+              false
+            ],
+            "delegation": []
+          }
+        },
+        {
+          "address": "azurerm_virtual_network.example",
+          "mode": "managed",
+          "type": "azurerm_virtual_network",
+          "name": "example",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "address_space": [
+              "10.0.0.0/16"
+            ],
+            "bgp_community": null,
+            "ddos_protection_plan": [],
+            "edge_zone": null,
+            "flow_timeout_in_minutes": null,
+            "location": "northcentralus",
+            "name": "vnet-dev-northcentralus-project-description",
+            "resource_group_name": "rg-dev-northcentralus-project-description",
+            "tags": {
+              "AutomationEnabled": "yes",
+              "CostCenter": "Security Guild",
+              "Owner": "someone@liatrio.com"
+            },
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "address_space": [
+              false
+            ],
+            "ddos_protection_plan": [],
+            "dns_servers": [],
+            "subnet": [],
+            "tags": {}
+          }
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "azurerm_linux_virtual_machine.example",
+      "mode": "managed",
+      "type": "azurerm_linux_virtual_machine",
+      "name": "example",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "additional_capabilities": [],
+          "admin_password": null,
+          "admin_ssh_key": [
+            {
+              "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/zDzi+Dz+HFena/JARjUOOBQX+EDvYY4UdjmHXFPbOyfJ/AQynBiKx9MESNJ0waZ1IHbXIZyf83DTU8UBfgTAMvH4r02HreSRKiM1bJdcw3l8x4/OPht525GjtzT0K0pWyycdfjMCz+ulJ3oVXWakP02VIuJe/vJfG8v5byi1lBNXFHCoDDUguoFxAtoo3XGd/prCYZKGBx0zVRcRhzNz0UJ6yJwecNH0SbRh5jl/IJknLAXIi+Wt5mvnY1ebWF3uHnXdSP71XnmzKgPnCm6zOwtRQdPEfnruLMiEjQeFZfU2bedy83x1hBijgizgx2Duwh0wiCGe2J4zVUItiRPtsjtOEAEW3ANZzr8KQDMQ27RZ5k/oTR4spjgTRYk1GBgXHc6CHZSKXYqHEecOmSgzqgsVLVCK7jzkhF0A7L0X7Gex4k7lcKouDksmjvrXVJQW/FdYxfx7qnvTqyb/oIVpk81k5wxks3M1WCbmIEMma+WR4LxC0LCLaIsdsu75DK8= blair@Blairs-MacBook-Pro.local\n",
+              "username": "adminuser"
+            }
+          ],
+          "admin_username": "adminuser",
+          "allow_extension_operations": true,
+          "availability_set_id": null,
+          "boot_diagnostics": [],
+          "capacity_reservation_group_id": null,
+          "custom_data": null,
+          "dedicated_host_group_id": null,
+          "dedicated_host_id": null,
+          "disable_password_authentication": true,
+          "edge_zone": null,
+          "encryption_at_host_enabled": null,
+          "eviction_policy": null,
+          "extensions_time_budget": "PT1H30M",
+          "gallery_application": [],
+          "identity": [],
+          "license_type": null,
+          "location": "northcentralus",
+          "max_bid_price": -1,
+          "name": "vm-dev-northcentralus-project-description",
+          "os_disk": [
+            {
+              "caching": "ReadWrite",
+              "diff_disk_settings": [],
+              "disk_encryption_set_id": null,
+              "secure_vm_disk_encryption_set_id": null,
+              "security_encryption_type": null,
+              "storage_account_type": "Standard_LRS",
+              "write_accelerator_enabled": false
+            }
+          ],
+          "patch_assessment_mode": "ImageDefault",
+          "patch_mode": "ImageDefault",
+          "plan": [],
+          "platform_fault_domain": -1,
+          "priority": "Regular",
+          "provision_vm_agent": true,
+          "proximity_placement_group_id": null,
+          "resource_group_name": "rg-dev-northcentralus-project-description",
+          "secret": [],
+          "secure_boot_enabled": null,
+          "size": "Standard_F2",
+          "source_image_id": null,
+          "source_image_reference": [
+            {
+              "offer": "UbuntuServer",
+              "publisher": "Canonical",
+              "sku": "16.04-LTS",
+              "version": "latest"
+            }
+          ],
+          "tags": {
+            "AutomationEnabled": "yes",
+            "CostCenter": "Security Guild",
+            "Owner": "someone@liatrio.com"
+          },
+          "timeouts": null,
+          "user_data": null,
+          "virtual_machine_scale_set_id": null,
+          "vtpm_enabled": null,
+          "zone": null
+        },
+        "after_unknown": {
+          "additional_capabilities": [],
+          "admin_ssh_key": [
+            {}
+          ],
+          "boot_diagnostics": [],
+          "computer_name": true,
+          "gallery_application": [],
+          "id": true,
+          "identity": [],
+          "network_interface_ids": true,
+          "os_disk": [
+            {
+              "diff_disk_settings": [],
+              "disk_size_gb": true,
+              "name": true
+            }
+          ],
+          "plan": [],
+          "private_ip_address": true,
+          "private_ip_addresses": true,
+          "public_ip_address": true,
+          "public_ip_addresses": true,
+          "secret": [],
+          "source_image_reference": [
+            {}
+          ],
+          "tags": {},
+          "termination_notification": true,
+          "virtual_machine_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "additional_capabilities": [],
+          "admin_password": true,
+          "admin_ssh_key": [
+            {}
+          ],
+          "boot_diagnostics": [],
+          "custom_data": true,
+          "gallery_application": [],
+          "identity": [],
+          "network_interface_ids": [],
+          "os_disk": [
+            {
+              "diff_disk_settings": []
+            }
+          ],
+          "plan": [],
+          "private_ip_addresses": [],
+          "public_ip_addresses": [],
+          "secret": [],
+          "source_image_reference": [
+            {}
+          ],
+          "tags": {},
+          "termination_notification": []
+        }
+      }
+    },
+    {
+      "address": "azurerm_managed_disk.disk",
+      "mode": "managed",
+      "type": "azurerm_managed_disk",
+      "name": "disk",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "create_option": "Empty",
+          "disk_access_id": null,
+          "disk_encryption_set_id": null,
+          "disk_size_gb": 1,
+          "edge_zone": null,
+          "encryption_settings": [],
+          "gallery_image_reference_id": null,
+          "hyper_v_generation": null,
+          "image_reference_id": null,
+          "location": "northcentralus",
+          "name": "disk-dev-northcentralus-project-description",
+          "network_access_policy": null,
+          "on_demand_bursting_enabled": null,
+          "os_type": null,
+          "public_network_access_enabled": true,
+          "resource_group_name": "rg-dev-northcentralus-project-description",
+          "secure_vm_disk_encryption_set_id": null,
+          "security_type": null,
+          "source_resource_id": null,
+          "storage_account_id": null,
+          "storage_account_type": "Standard_LRS",
+          "tags": {
+            "AutomationEnabled": "yes",
+            "CostCenter": "Security Guild",
+            "Owner": "someone@liatrio.com"
+          },
+          "timeouts": null,
+          "trusted_launch_enabled": null,
+          "upload_size_bytes": null,
+          "zone": null
+        },
+        "after_unknown": {
+          "disk_iops_read_only": true,
+          "disk_iops_read_write": true,
+          "disk_mbps_read_only": true,
+          "disk_mbps_read_write": true,
+          "encryption_settings": [],
+          "id": true,
+          "logical_sector_size": true,
+          "max_shares": true,
+          "source_uri": true,
+          "tags": {},
+          "tier": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "encryption_settings": [],
+          "tags": {}
+        }
+      }
+    },
+    {
+      "address": "azurerm_network_interface.example",
+      "mode": "managed",
+      "type": "azurerm_network_interface",
+      "name": "example",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "edge_zone": null,
+          "enable_accelerated_networking": false,
+          "enable_ip_forwarding": false,
+          "ip_configuration": [
+            {
+              "name": "internal",
+              "private_ip_address_allocation": "Dynamic",
+              "private_ip_address_version": "IPv4",
+              "public_ip_address_id": null
+            }
+          ],
+          "location": "northcentralus",
+          "name": "example-nic",
+          "resource_group_name": "rg-dev-northcentralus-project-description",
+          "tags": {
+            "AutomationEnabled": "yes",
+            "CostCenter": "Security Guild",
+            "Owner": "someone@liatrio.com"
+          },
+          "timeouts": null
+        },
+        "after_unknown": {
+          "applied_dns_servers": true,
+          "dns_servers": true,
+          "id": true,
+          "internal_dns_name_label": true,
+          "internal_domain_name_suffix": true,
+          "ip_configuration": [
+            {
+              "gateway_load_balancer_frontend_ip_configuration_id": true,
+              "primary": true,
+              "private_ip_address": true,
+              "subnet_id": true
+            }
+          ],
+          "mac_address": true,
+          "private_ip_address": true,
+          "private_ip_addresses": true,
+          "tags": {},
+          "virtual_machine_id": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "applied_dns_servers": [],
+          "dns_servers": [],
+          "ip_configuration": [
+            {}
+          ],
+          "private_ip_addresses": [],
+          "tags": {}
+        }
+      }
+    },
+    {
+      "address": "azurerm_network_security_group.example",
+      "mode": "managed",
+      "type": "azurerm_network_security_group",
+      "name": "example",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "location": "northcentralus",
+          "name": "nsg-dev-northcentralus-project-description",
+          "resource_group_name": "rg-dev-northcentralus-project-description",
+          "security_rule": [
+            {
+              "access": "Allow",
+              "description": "",
+              "destination_address_prefix": "*",
+              "destination_address_prefixes": [],
+              "destination_application_security_group_ids": [],
+              "destination_port_range": "*",
+              "destination_port_ranges": [],
+              "direction": "Inbound",
+              "name": "test123",
+              "priority": 100,
+              "protocol": "Tcp",
+              "source_address_prefix": "*",
+              "source_address_prefixes": [],
+              "source_application_security_group_ids": [],
+              "source_port_range": "*",
+              "source_port_ranges": []
+            }
+          ],
+          "tags": {
+            "AutomationEnabled": "yes",
+            "CostCenter": "Security Guild",
+            "Owner": "someone@liatrio.com"
+          },
+          "timeouts": null
+        },
+        "after_unknown": {
+          "id": true,
+          "security_rule": [
+            {
+              "destination_address_prefixes": [],
+              "destination_application_security_group_ids": [],
+              "destination_port_ranges": [],
+              "source_address_prefixes": [],
+              "source_application_security_group_ids": [],
+              "source_port_ranges": []
+            }
+          ],
+          "tags": {}
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "security_rule": [
+            {
+              "destination_address_prefixes": [],
+              "destination_application_security_group_ids": [],
+              "destination_port_ranges": [],
+              "source_address_prefixes": [],
+              "source_application_security_group_ids": [],
+              "source_port_ranges": []
+            }
+          ],
+          "tags": {}
+        }
+      }
+    },
+    {
+      "address": "azurerm_resource_group.rg",
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "rg",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "location": "northcentralus",
+          "name": "rg-dev-northcentralus-project-description",
+          "tags": {
+            "AutomationEnabled": "yes",
+            "CostCenter": "Security Guild",
+            "Owner": "someone@liatrio.com"
+          },
+          "timeouts": null
+        },
+        "after_unknown": {
+          "id": true,
+          "tags": {}
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "tags": {}
+        }
+      }
+    },
+    {
+      "address": "azurerm_storage_account.example",
+      "mode": "managed",
+      "type": "azurerm_storage_account",
+      "name": "example",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "account_kind": "StorageV2",
+          "account_replication_type": "GRS",
+          "account_tier": "Standard",
+          "allow_nested_items_to_be_public": true,
+          "allowed_copy_scope": null,
+          "azure_files_authentication": [],
+          "cross_tenant_replication_enabled": true,
+          "custom_domain": [],
+          "customer_managed_key": [],
+          "default_to_oauth_authentication": false,
+          "edge_zone": null,
+          "enable_https_traffic_only": true,
+          "identity": [],
+          "immutability_policy": [],
+          "infrastructure_encryption_enabled": false,
+          "is_hns_enabled": false,
+          "location": "northcentralus",
+          "min_tls_version": "TLS1_2",
+          "name": "stodevnorthcentralusxy",
+          "nfsv3_enabled": false,
+          "public_network_access_enabled": true,
+          "queue_encryption_key_type": "Service",
+          "resource_group_name": "rg-dev-northcentralus-project-description",
+          "sas_policy": [],
+          "sftp_enabled": false,
+          "shared_access_key_enabled": true,
+          "static_website": [],
+          "table_encryption_key_type": "Service",
+          "tags": {
+            "AutomationEnabled": "yes",
+            "CostCenter": "Security Guild",
+            "Owner": "someone@liatrio.com"
+          },
+          "timeouts": null
+        },
+        "after_unknown": {
+          "access_tier": true,
+          "azure_files_authentication": [],
+          "blob_properties": true,
+          "custom_domain": [],
+          "customer_managed_key": [],
+          "id": true,
+          "identity": [],
+          "immutability_policy": [],
+          "large_file_share_enabled": true,
+          "network_rules": true,
+          "primary_access_key": true,
+          "primary_blob_connection_string": true,
+          "primary_blob_endpoint": true,
+          "primary_blob_host": true,
+          "primary_connection_string": true,
+          "primary_dfs_endpoint": true,
+          "primary_dfs_host": true,
+          "primary_file_endpoint": true,
+          "primary_file_host": true,
+          "primary_location": true,
+          "primary_queue_endpoint": true,
+          "primary_queue_host": true,
+          "primary_table_endpoint": true,
+          "primary_table_host": true,
+          "primary_web_endpoint": true,
+          "primary_web_host": true,
+          "queue_properties": true,
+          "routing": true,
+          "sas_policy": [],
+          "secondary_access_key": true,
+          "secondary_blob_connection_string": true,
+          "secondary_blob_endpoint": true,
+          "secondary_blob_host": true,
+          "secondary_connection_string": true,
+          "secondary_dfs_endpoint": true,
+          "secondary_dfs_host": true,
+          "secondary_file_endpoint": true,
+          "secondary_file_host": true,
+          "secondary_location": true,
+          "secondary_queue_endpoint": true,
+          "secondary_queue_host": true,
+          "secondary_table_endpoint": true,
+          "secondary_table_host": true,
+          "secondary_web_endpoint": true,
+          "secondary_web_host": true,
+          "share_properties": true,
+          "static_website": [],
+          "tags": {}
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "azure_files_authentication": [],
+          "blob_properties": [],
+          "custom_domain": [],
+          "customer_managed_key": [],
+          "identity": [],
+          "immutability_policy": [],
+          "network_rules": [],
+          "primary_access_key": true,
+          "primary_blob_connection_string": true,
+          "primary_connection_string": true,
+          "queue_properties": [],
+          "routing": [],
+          "sas_policy": [],
+          "secondary_access_key": true,
+          "secondary_blob_connection_string": true,
+          "secondary_connection_string": true,
+          "share_properties": [],
+          "static_website": [],
+          "tags": {}
+        }
+      }
+    },
+    {
+      "address": "azurerm_subnet.example",
+      "mode": "managed",
+      "type": "azurerm_subnet",
+      "name": "example",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "address_prefixes": [
+            "10.0.2.0/24"
+          ],
+          "delegation": [],
+          "name": "snet-dev-northcentralus-project-description",
+          "resource_group_name": "rg-dev-northcentralus-project-description",
+          "service_endpoint_policy_ids": null,
+          "service_endpoints": null,
+          "timeouts": null,
+          "virtual_network_name": "vnet-dev-northcentralus-project-description"
+        },
+        "after_unknown": {
+          "address_prefixes": [
+            false
+          ],
+          "delegation": [],
+          "enforce_private_link_endpoint_network_policies": true,
+          "enforce_private_link_service_network_policies": true,
+          "id": true,
+          "private_endpoint_network_policies_enabled": true,
+          "private_link_service_network_policies_enabled": true
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "address_prefixes": [
+            false
+          ],
+          "delegation": []
+        }
+      }
+    },
+    {
+      "address": "azurerm_virtual_network.example",
+      "mode": "managed",
+      "type": "azurerm_virtual_network",
+      "name": "example",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "address_space": [
+            "10.0.0.0/16"
+          ],
+          "bgp_community": null,
+          "ddos_protection_plan": [],
+          "edge_zone": null,
+          "flow_timeout_in_minutes": null,
+          "location": "northcentralus",
+          "name": "vnet-dev-northcentralus-project-description",
+          "resource_group_name": "rg-dev-northcentralus-project-description",
+          "tags": {
+            "AutomationEnabled": "yes",
+            "CostCenter": "Security Guild",
+            "Owner": "someone@liatrio.com"
+          },
+          "timeouts": null
+        },
+        "after_unknown": {
+          "address_space": [
+            false
+          ],
+          "ddos_protection_plan": [],
+          "dns_servers": true,
+          "guid": true,
+          "id": true,
+          "subnet": true,
+          "tags": {}
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "address_space": [
+            false
+          ],
+          "ddos_protection_plan": [],
+          "dns_servers": [],
+          "subnet": [],
+          "tags": {}
+        }
+      }
+    }
+  ],
+  "configuration": {
+    "provider_config": {
+      "azurerm": {
+        "name": "azurerm",
+        "full_name": "registry.terraform.io/hashicorp/azurerm",
+        "version_constraint": ">= 3.19.1",
+        "expressions": {
+          "features": [
+            {}
+          ]
+        }
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "azurerm_linux_virtual_machine.example",
+          "mode": "managed",
+          "type": "azurerm_linux_virtual_machine",
+          "name": "example",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "admin_ssh_key": [
+              {
+                "public_key": {
+                  "constant_value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/zDzi+Dz+HFena/JARjUOOBQX+EDvYY4UdjmHXFPbOyfJ/AQynBiKx9MESNJ0waZ1IHbXIZyf83DTU8UBfgTAMvH4r02HreSRKiM1bJdcw3l8x4/OPht525GjtzT0K0pWyycdfjMCz+ulJ3oVXWakP02VIuJe/vJfG8v5byi1lBNXFHCoDDUguoFxAtoo3XGd/prCYZKGBx0zVRcRhzNz0UJ6yJwecNH0SbRh5jl/IJknLAXIi+Wt5mvnY1ebWF3uHnXdSP71XnmzKgPnCm6zOwtRQdPEfnruLMiEjQeFZfU2bedy83x1hBijgizgx2Duwh0wiCGe2J4zVUItiRPtsjtOEAEW3ANZzr8KQDMQ27RZ5k/oTR4spjgTRYk1GBgXHc6CHZSKXYqHEecOmSgzqgsVLVCK7jzkhF0A7L0X7Gex4k7lcKouDksmjvrXVJQW/FdYxfx7qnvTqyb/oIVpk81k5wxks3M1WCbmIEMma+WR4LxC0LCLaIsdsu75DK8= blair@Blairs-MacBook-Pro.local\n"
+                },
+                "username": {
+                  "constant_value": "adminuser"
+                }
+              }
+            ],
+            "admin_username": {
+              "constant_value": "adminuser"
+            },
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg.location",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "vm-dev-northcentralus-project-description"
+            },
+            "network_interface_ids": {
+              "references": [
+                "azurerm_network_interface.example.id",
+                "azurerm_network_interface.example"
+              ]
+            },
+            "os_disk": [
+              {
+                "caching": {
+                  "constant_value": "ReadWrite"
+                },
+                "storage_account_type": {
+                  "constant_value": "Standard_LRS"
+                }
+              }
+            ],
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg.name",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "size": {
+              "constant_value": "Standard_F2"
+            },
+            "source_image_reference": [
+              {
+                "offer": {
+                  "constant_value": "UbuntuServer"
+                },
+                "publisher": {
+                  "constant_value": "Canonical"
+                },
+                "sku": {
+                  "constant_value": "16.04-LTS"
+                },
+                "version": {
+                  "constant_value": "latest"
+                }
+              }
+            ],
+            "tags": {
+              "references": [
+                "var.tags"
+              ]
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "azurerm_managed_disk.disk",
+          "mode": "managed",
+          "type": "azurerm_managed_disk",
+          "name": "disk",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "create_option": {
+              "constant_value": "Empty"
+            },
+            "disk_size_gb": {
+              "constant_value": "1"
+            },
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg.location",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "disk-dev-northcentralus-project-description"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg.name",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "storage_account_type": {
+              "constant_value": "Standard_LRS"
+            },
+            "tags": {
+              "references": [
+                "var.tags"
+              ]
+            }
+          },
+          "schema_version": 1
+        },
+        {
+          "address": "azurerm_network_interface.example",
+          "mode": "managed",
+          "type": "azurerm_network_interface",
+          "name": "example",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "ip_configuration": [
+              {
+                "name": {
+                  "constant_value": "internal"
+                },
+                "private_ip_address_allocation": {
+                  "constant_value": "Dynamic"
+                },
+                "subnet_id": {
+                  "references": [
+                    "azurerm_subnet.example.id",
+                    "azurerm_subnet.example"
+                  ]
+                }
+              }
+            ],
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg.location",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "example-nic"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg.name",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "tags": {
+              "references": [
+                "var.tags"
+              ]
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "azurerm_network_security_group.example",
+          "mode": "managed",
+          "type": "azurerm_network_security_group",
+          "name": "example",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg.location",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "nsg-dev-northcentralus-project-description"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg.name",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "security_rule": {
+              "constant_value": [
+                {
+                  "access": "Allow",
+                  "description": null,
+                  "destination_address_prefix": "*",
+                  "destination_address_prefixes": null,
+                  "destination_application_security_group_ids": null,
+                  "destination_port_range": "*",
+                  "destination_port_ranges": null,
+                  "direction": "Inbound",
+                  "name": "test123",
+                  "priority": 100,
+                  "protocol": "Tcp",
+                  "source_address_prefix": "*",
+                  "source_address_prefixes": null,
+                  "source_application_security_group_ids": null,
+                  "source_port_range": "*",
+                  "source_port_ranges": null
+                }
+              ]
+            },
+            "tags": {
+              "references": [
+                "var.tags"
+              ]
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "azurerm_resource_group.rg",
+          "mode": "managed",
+          "type": "azurerm_resource_group",
+          "name": "rg",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "location": {
+              "constant_value": "northcentralus"
+            },
+            "name": {
+              "constant_value": "rg-dev-northcentralus-project-description"
+            },
+            "tags": {
+              "references": [
+                "var.tags"
+              ]
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "azurerm_storage_account.example",
+          "mode": "managed",
+          "type": "azurerm_storage_account",
+          "name": "example",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "account_replication_type": {
+              "constant_value": "GRS"
+            },
+            "account_tier": {
+              "constant_value": "Standard"
+            },
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg.location",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "stodevnorthcentralusxy"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg.name",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "tags": {
+              "references": [
+                "var.tags"
+              ]
+            }
+          },
+          "schema_version": 3
+        },
+        {
+          "address": "azurerm_subnet.example",
+          "mode": "managed",
+          "type": "azurerm_subnet",
+          "name": "example",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "address_prefixes": {
+              "constant_value": [
+                "10.0.2.0/24"
+              ]
+            },
+            "name": {
+              "constant_value": "snet-dev-northcentralus-project-description"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg.name",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "virtual_network_name": {
+              "references": [
+                "azurerm_virtual_network.example.name",
+                "azurerm_virtual_network.example"
+              ]
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "azurerm_virtual_network.example",
+          "mode": "managed",
+          "type": "azurerm_virtual_network",
+          "name": "example",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "address_space": {
+              "constant_value": [
+                "10.0.0.0/16"
+              ]
+            },
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg.location",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "vnet-dev-northcentralus-project-description"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg.name",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "tags": {
+              "references": [
+                "var.tags"
+              ]
+            }
+          },
+          "schema_version": 0
+        }
+      ],
+      "variables": {
+        "tags": {
+          "description": "The Tags"
+        }
+      }
+    }
+  },
+  "relevant_attributes": [
+    {
+      "resource": "azurerm_virtual_network.example",
+      "attribute": [
+        "name"
+      ]
+    },
+    {
+      "resource": "azurerm_subnet.example",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "azurerm_network_interface.example",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "azurerm_resource_group.rg",
+      "attribute": [
+        "name"
+      ]
+    },
+    {
+      "resource": "azurerm_resource_group.rg",
+      "attribute": [
+        "location"
+      ]
+    }
+  ]
+}

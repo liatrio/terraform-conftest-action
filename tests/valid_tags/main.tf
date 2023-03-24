@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "rg" {
-  name = "example-rg"
+  name = "rg-dev-northcentralus-project-description"
   location = "northcentralus"
 
   tags = {

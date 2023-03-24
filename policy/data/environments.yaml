@@ -1,0 +1,8 @@
+environments:
+- dev
+- qa
+- prod
+- test
+- staging
+- sandbox
+- dr

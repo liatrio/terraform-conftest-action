@@ -1,0 +1,779 @@
+{
+  "format_version": "1.1",
+  "terraform_version": "1.3.7",
+  "variables": {
+    "tags": {
+      "value": {
+        "AutomationEnabled": "yes",
+        "CostCenter": "Security Guild",
+        "Owner": "someone@liatrio.com"
+      }
+    }
+  },
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "azurerm_resource_group.rg",
+          "mode": "managed",
+          "type": "azurerm_resource_group",
+          "name": "rg",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 0,
+          "values": {
+            "location": "northcentralus",
+            "name": "rg-dev-northcentralus-project-description",
+            "tags": {
+              "AutomationEnabled": "yes",
+              "CostCenter": "Security Guild",
+              "Owner": "someone@liatrio.com"
+            },
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "tags": {}
+          }
+        },
+        {
+          "address": "azurerm_storage_account.example1",
+          "mode": "managed",
+          "type": "azurerm_storage_account",
+          "name": "example1",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 3,
+          "values": {
+            "account_kind": "StorageV2",
+            "account_replication_type": "GRS",
+            "account_tier": "Standard",
+            "allow_nested_items_to_be_public": true,
+            "allowed_copy_scope": null,
+            "azure_files_authentication": [],
+            "cross_tenant_replication_enabled": true,
+            "custom_domain": [],
+            "customer_managed_key": [],
+            "default_to_oauth_authentication": false,
+            "edge_zone": null,
+            "enable_https_traffic_only": true,
+            "identity": [],
+            "immutability_policy": [],
+            "infrastructure_encryption_enabled": false,
+            "is_hns_enabled": false,
+            "location": "northcentralus",
+            "min_tls_version": "TLS1_2",
+            "name": "stdevnorthcentralusxy",
+            "nfsv3_enabled": false,
+            "public_network_access_enabled": true,
+            "queue_encryption_key_type": "Service",
+            "resource_group_name": "rg-dev-northcentralus-project-description",
+            "sas_policy": [],
+            "sftp_enabled": false,
+            "shared_access_key_enabled": true,
+            "static_website": [],
+            "table_encryption_key_type": "Service",
+            "tags": {
+              "AutomationEnabled": "yes",
+              "CostCenter": "Security Guild",
+              "Owner": "someone@liatrio.com"
+            },
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "azure_files_authentication": [],
+            "blob_properties": [],
+            "custom_domain": [],
+            "customer_managed_key": [],
+            "identity": [],
+            "immutability_policy": [],
+            "network_rules": [],
+            "queue_properties": [],
+            "routing": [],
+            "sas_policy": [],
+            "share_properties": [],
+            "static_website": [],
+            "tags": {}
+          }
+        },
+        {
+          "address": "azurerm_storage_account.example2",
+          "mode": "managed",
+          "type": "azurerm_storage_account",
+          "name": "example2",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 3,
+          "values": {
+            "account_kind": "StorageV2",
+            "account_replication_type": "GRS",
+            "account_tier": "Standard",
+            "allow_nested_items_to_be_public": true,
+            "allowed_copy_scope": null,
+            "azure_files_authentication": [],
+            "cross_tenant_replication_enabled": true,
+            "custom_domain": [],
+            "customer_managed_key": [],
+            "default_to_oauth_authentication": false,
+            "edge_zone": null,
+            "enable_https_traffic_only": true,
+            "identity": [],
+            "immutability_policy": [],
+            "infrastructure_encryption_enabled": false,
+            "is_hns_enabled": false,
+            "location": "northcentralus",
+            "min_tls_version": "TLS1_2",
+            "name": "stodvnorthcentralusxy",
+            "nfsv3_enabled": false,
+            "public_network_access_enabled": true,
+            "queue_encryption_key_type": "Service",
+            "resource_group_name": "rg-dev-northcentralus-project-description",
+            "sas_policy": [],
+            "sftp_enabled": false,
+            "shared_access_key_enabled": true,
+            "static_website": [],
+            "table_encryption_key_type": "Service",
+            "tags": {
+              "AutomationEnabled": "yes",
+              "CostCenter": "Security Guild",
+              "Owner": "someone@liatrio.com"
+            },
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "azure_files_authentication": [],
+            "blob_properties": [],
+            "custom_domain": [],
+            "customer_managed_key": [],
+            "identity": [],
+            "immutability_policy": [],
+            "network_rules": [],
+            "queue_properties": [],
+            "routing": [],
+            "sas_policy": [],
+            "share_properties": [],
+            "static_website": [],
+            "tags": {}
+          }
+        },
+        {
+          "address": "azurerm_storage_account.example3",
+          "mode": "managed",
+          "type": "azurerm_storage_account",
+          "name": "example3",
+          "provider_name": "registry.terraform.io/hashicorp/azurerm",
+          "schema_version": 3,
+          "values": {
+            "account_kind": "StorageV2",
+            "account_replication_type": "GRS",
+            "account_tier": "Standard",
+            "allow_nested_items_to_be_public": true,
+            "allowed_copy_scope": null,
+            "azure_files_authentication": [],
+            "cross_tenant_replication_enabled": true,
+            "custom_domain": [],
+            "customer_managed_key": [],
+            "default_to_oauth_authentication": false,
+            "edge_zone": null,
+            "enable_https_traffic_only": true,
+            "identity": [],
+            "immutability_policy": [],
+            "infrastructure_encryption_enabled": false,
+            "is_hns_enabled": false,
+            "location": "northcentralus",
+            "min_tls_version": "TLS1_2",
+            "name": "stodevnorhcentralusxy",
+            "nfsv3_enabled": false,
+            "public_network_access_enabled": true,
+            "queue_encryption_key_type": "Service",
+            "resource_group_name": "rg-dev-northcentralus-project-description",
+            "sas_policy": [],
+            "sftp_enabled": false,
+            "shared_access_key_enabled": true,
+            "static_website": [],
+            "table_encryption_key_type": "Service",
+            "tags": {
+              "AutomationEnabled": "yes",
+              "CostCenter": "Security Guild",
+              "Owner": "someone@liatrio.com"
+            },
+            "timeouts": null
+          },
+          "sensitive_values": {
+            "azure_files_authentication": [],
+            "blob_properties": [],
+            "custom_domain": [],
+            "customer_managed_key": [],
+            "identity": [],
+            "immutability_policy": [],
+            "network_rules": [],
+            "queue_properties": [],
+            "routing": [],
+            "sas_policy": [],
+            "share_properties": [],
+            "static_website": [],
+            "tags": {}
+          }
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "azurerm_resource_group.rg",
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "rg",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "location": "northcentralus",
+          "name": "rg-dev-northcentralus-project-description",
+          "tags": {
+            "AutomationEnabled": "yes",
+            "CostCenter": "Security Guild",
+            "Owner": "someone@liatrio.com"
+          },
+          "timeouts": null
+        },
+        "after_unknown": {
+          "id": true,
+          "tags": {}
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "tags": {}
+        }
+      }
+    },
+    {
+      "address": "azurerm_storage_account.example1",
+      "mode": "managed",
+      "type": "azurerm_storage_account",
+      "name": "example1",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "account_kind": "StorageV2",
+          "account_replication_type": "GRS",
+          "account_tier": "Standard",
+          "allow_nested_items_to_be_public": true,
+          "allowed_copy_scope": null,
+          "azure_files_authentication": [],
+          "cross_tenant_replication_enabled": true,
+          "custom_domain": [],
+          "customer_managed_key": [],
+          "default_to_oauth_authentication": false,
+          "edge_zone": null,
+          "enable_https_traffic_only": true,
+          "identity": [],
+          "immutability_policy": [],
+          "infrastructure_encryption_enabled": false,
+          "is_hns_enabled": false,
+          "location": "northcentralus",
+          "min_tls_version": "TLS1_2",
+          "name": "stdevnorthcentralusxy",
+          "nfsv3_enabled": false,
+          "public_network_access_enabled": true,
+          "queue_encryption_key_type": "Service",
+          "resource_group_name": "rg-dev-northcentralus-project-description",
+          "sas_policy": [],
+          "sftp_enabled": false,
+          "shared_access_key_enabled": true,
+          "static_website": [],
+          "table_encryption_key_type": "Service",
+          "tags": {
+            "AutomationEnabled": "yes",
+            "CostCenter": "Security Guild",
+            "Owner": "someone@liatrio.com"
+          },
+          "timeouts": null
+        },
+        "after_unknown": {
+          "access_tier": true,
+          "azure_files_authentication": [],
+          "blob_properties": true,
+          "custom_domain": [],
+          "customer_managed_key": [],
+          "id": true,
+          "identity": [],
+          "immutability_policy": [],
+          "large_file_share_enabled": true,
+          "network_rules": true,
+          "primary_access_key": true,
+          "primary_blob_connection_string": true,
+          "primary_blob_endpoint": true,
+          "primary_blob_host": true,
+          "primary_connection_string": true,
+          "primary_dfs_endpoint": true,
+          "primary_dfs_host": true,
+          "primary_file_endpoint": true,
+          "primary_file_host": true,
+          "primary_location": true,
+          "primary_queue_endpoint": true,
+          "primary_queue_host": true,
+          "primary_table_endpoint": true,
+          "primary_table_host": true,
+          "primary_web_endpoint": true,
+          "primary_web_host": true,
+          "queue_properties": true,
+          "routing": true,
+          "sas_policy": [],
+          "secondary_access_key": true,
+          "secondary_blob_connection_string": true,
+          "secondary_blob_endpoint": true,
+          "secondary_blob_host": true,
+          "secondary_connection_string": true,
+          "secondary_dfs_endpoint": true,
+          "secondary_dfs_host": true,
+          "secondary_file_endpoint": true,
+          "secondary_file_host": true,
+          "secondary_location": true,
+          "secondary_queue_endpoint": true,
+          "secondary_queue_host": true,
+          "secondary_table_endpoint": true,
+          "secondary_table_host": true,
+          "secondary_web_endpoint": true,
+          "secondary_web_host": true,
+          "share_properties": true,
+          "static_website": [],
+          "tags": {}
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "azure_files_authentication": [],
+          "blob_properties": [],
+          "custom_domain": [],
+          "customer_managed_key": [],
+          "identity": [],
+          "immutability_policy": [],
+          "network_rules": [],
+          "primary_access_key": true,
+          "primary_blob_connection_string": true,
+          "primary_connection_string": true,
+          "queue_properties": [],
+          "routing": [],
+          "sas_policy": [],
+          "secondary_access_key": true,
+          "secondary_blob_connection_string": true,
+          "secondary_connection_string": true,
+          "share_properties": [],
+          "static_website": [],
+          "tags": {}
+        }
+      }
+    },
+    {
+      "address": "azurerm_storage_account.example2",
+      "mode": "managed",
+      "type": "azurerm_storage_account",
+      "name": "example2",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "account_kind": "StorageV2",
+          "account_replication_type": "GRS",
+          "account_tier": "Standard",
+          "allow_nested_items_to_be_public": true,
+          "allowed_copy_scope": null,
+          "azure_files_authentication": [],
+          "cross_tenant_replication_enabled": true,
+          "custom_domain": [],
+          "customer_managed_key": [],
+          "default_to_oauth_authentication": false,
+          "edge_zone": null,
+          "enable_https_traffic_only": true,
+          "identity": [],
+          "immutability_policy": [],
+          "infrastructure_encryption_enabled": false,
+          "is_hns_enabled": false,
+          "location": "northcentralus",
+          "min_tls_version": "TLS1_2",
+          "name": "stodvnorthcentralusxy",
+          "nfsv3_enabled": false,
+          "public_network_access_enabled": true,
+          "queue_encryption_key_type": "Service",
+          "resource_group_name": "rg-dev-northcentralus-project-description",
+          "sas_policy": [],
+          "sftp_enabled": false,
+          "shared_access_key_enabled": true,
+          "static_website": [],
+          "table_encryption_key_type": "Service",
+          "tags": {
+            "AutomationEnabled": "yes",
+            "CostCenter": "Security Guild",
+            "Owner": "someone@liatrio.com"
+          },
+          "timeouts": null
+        },
+        "after_unknown": {
+          "access_tier": true,
+          "azure_files_authentication": [],
+          "blob_properties": true,
+          "custom_domain": [],
+          "customer_managed_key": [],
+          "id": true,
+          "identity": [],
+          "immutability_policy": [],
+          "large_file_share_enabled": true,
+          "network_rules": true,
+          "primary_access_key": true,
+          "primary_blob_connection_string": true,
+          "primary_blob_endpoint": true,
+          "primary_blob_host": true,
+          "primary_connection_string": true,
+          "primary_dfs_endpoint": true,
+          "primary_dfs_host": true,
+          "primary_file_endpoint": true,
+          "primary_file_host": true,
+          "primary_location": true,
+          "primary_queue_endpoint": true,
+          "primary_queue_host": true,
+          "primary_table_endpoint": true,
+          "primary_table_host": true,
+          "primary_web_endpoint": true,
+          "primary_web_host": true,
+          "queue_properties": true,
+          "routing": true,
+          "sas_policy": [],
+          "secondary_access_key": true,
+          "secondary_blob_connection_string": true,
+          "secondary_blob_endpoint": true,
+          "secondary_blob_host": true,
+          "secondary_connection_string": true,
+          "secondary_dfs_endpoint": true,
+          "secondary_dfs_host": true,
+          "secondary_file_endpoint": true,
+          "secondary_file_host": true,
+          "secondary_location": true,
+          "secondary_queue_endpoint": true,
+          "secondary_queue_host": true,
+          "secondary_table_endpoint": true,
+          "secondary_table_host": true,
+          "secondary_web_endpoint": true,
+          "secondary_web_host": true,
+          "share_properties": true,
+          "static_website": [],
+          "tags": {}
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "azure_files_authentication": [],
+          "blob_properties": [],
+          "custom_domain": [],
+          "customer_managed_key": [],
+          "identity": [],
+          "immutability_policy": [],
+          "network_rules": [],
+          "primary_access_key": true,
+          "primary_blob_connection_string": true,
+          "primary_connection_string": true,
+          "queue_properties": [],
+          "routing": [],
+          "sas_policy": [],
+          "secondary_access_key": true,
+          "secondary_blob_connection_string": true,
+          "secondary_connection_string": true,
+          "share_properties": [],
+          "static_website": [],
+          "tags": {}
+        }
+      }
+    },
+    {
+      "address": "azurerm_storage_account.example3",
+      "mode": "managed",
+      "type": "azurerm_storage_account",
+      "name": "example3",
+      "provider_name": "registry.terraform.io/hashicorp/azurerm",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "account_kind": "StorageV2",
+          "account_replication_type": "GRS",
+          "account_tier": "Standard",
+          "allow_nested_items_to_be_public": true,
+          "allowed_copy_scope": null,
+          "azure_files_authentication": [],
+          "cross_tenant_replication_enabled": true,
+          "custom_domain": [],
+          "customer_managed_key": [],
+          "default_to_oauth_authentication": false,
+          "edge_zone": null,
+          "enable_https_traffic_only": true,
+          "identity": [],
+          "immutability_policy": [],
+          "infrastructure_encryption_enabled": false,
+          "is_hns_enabled": false,
+          "location": "northcentralus",
+          "min_tls_version": "TLS1_2",
+          "name": "stodevnorhcentralusxy",
+          "nfsv3_enabled": false,
+          "public_network_access_enabled": true,
+          "queue_encryption_key_type": "Service",
+          "resource_group_name": "rg-dev-northcentralus-project-description",
+          "sas_policy": [],
+          "sftp_enabled": false,
+          "shared_access_key_enabled": true,
+          "static_website": [],
+          "table_encryption_key_type": "Service",
+          "tags": {
+            "AutomationEnabled": "yes",
+            "CostCenter": "Security Guild",
+            "Owner": "someone@liatrio.com"
+          },
+          "timeouts": null
+        },
+        "after_unknown": {
+          "access_tier": true,
+          "azure_files_authentication": [],
+          "blob_properties": true,
+          "custom_domain": [],
+          "customer_managed_key": [],
+          "id": true,
+          "identity": [],
+          "immutability_policy": [],
+          "large_file_share_enabled": true,
+          "network_rules": true,
+          "primary_access_key": true,
+          "primary_blob_connection_string": true,
+          "primary_blob_endpoint": true,
+          "primary_blob_host": true,
+          "primary_connection_string": true,
+          "primary_dfs_endpoint": true,
+          "primary_dfs_host": true,
+          "primary_file_endpoint": true,
+          "primary_file_host": true,
+          "primary_location": true,
+          "primary_queue_endpoint": true,
+          "primary_queue_host": true,
+          "primary_table_endpoint": true,
+          "primary_table_host": true,
+          "primary_web_endpoint": true,
+          "primary_web_host": true,
+          "queue_properties": true,
+          "routing": true,
+          "sas_policy": [],
+          "secondary_access_key": true,
+          "secondary_blob_connection_string": true,
+          "secondary_blob_endpoint": true,
+          "secondary_blob_host": true,
+          "secondary_connection_string": true,
+          "secondary_dfs_endpoint": true,
+          "secondary_dfs_host": true,
+          "secondary_file_endpoint": true,
+          "secondary_file_host": true,
+          "secondary_location": true,
+          "secondary_queue_endpoint": true,
+          "secondary_queue_host": true,
+          "secondary_table_endpoint": true,
+          "secondary_table_host": true,
+          "secondary_web_endpoint": true,
+          "secondary_web_host": true,
+          "share_properties": true,
+          "static_website": [],
+          "tags": {}
+        },
+        "before_sensitive": false,
+        "after_sensitive": {
+          "azure_files_authentication": [],
+          "blob_properties": [],
+          "custom_domain": [],
+          "customer_managed_key": [],
+          "identity": [],
+          "immutability_policy": [],
+          "network_rules": [],
+          "primary_access_key": true,
+          "primary_blob_connection_string": true,
+          "primary_connection_string": true,
+          "queue_properties": [],
+          "routing": [],
+          "sas_policy": [],
+          "secondary_access_key": true,
+          "secondary_blob_connection_string": true,
+          "secondary_connection_string": true,
+          "share_properties": [],
+          "static_website": [],
+          "tags": {}
+        }
+      }
+    }
+  ],
+  "configuration": {
+    "provider_config": {
+      "azurerm": {
+        "name": "azurerm",
+        "full_name": "registry.terraform.io/hashicorp/azurerm",
+        "version_constraint": ">= 3.19.1",
+        "expressions": {
+          "features": [
+            {}
+          ]
+        }
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "azurerm_resource_group.rg",
+          "mode": "managed",
+          "type": "azurerm_resource_group",
+          "name": "rg",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "location": {
+              "constant_value": "northcentralus"
+            },
+            "name": {
+              "constant_value": "rg-dev-northcentralus-project-description"
+            },
+            "tags": {
+              "references": [
+                "var.tags"
+              ]
+            }
+          },
+          "schema_version": 0
+        },
+        {
+          "address": "azurerm_storage_account.example1",
+          "mode": "managed",
+          "type": "azurerm_storage_account",
+          "name": "example1",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "account_replication_type": {
+              "constant_value": "GRS"
+            },
+            "account_tier": {
+              "constant_value": "Standard"
+            },
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg.location",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "stdevnorthcentralusxy"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg.name",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "tags": {
+              "references": [
+                "var.tags"
+              ]
+            }
+          },
+          "schema_version": 3
+        },
+        {
+          "address": "azurerm_storage_account.example2",
+          "mode": "managed",
+          "type": "azurerm_storage_account",
+          "name": "example2",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "account_replication_type": {
+              "constant_value": "GRS"
+            },
+            "account_tier": {
+              "constant_value": "Standard"
+            },
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg.location",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "stodvnorthcentralusxy"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg.name",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "tags": {
+              "references": [
+                "var.tags"
+              ]
+            }
+          },
+          "schema_version": 3
+        },
+        {
+          "address": "azurerm_storage_account.example3",
+          "mode": "managed",
+          "type": "azurerm_storage_account",
+          "name": "example3",
+          "provider_config_key": "azurerm",
+          "expressions": {
+            "account_replication_type": {
+              "constant_value": "GRS"
+            },
+            "account_tier": {
+              "constant_value": "Standard"
+            },
+            "location": {
+              "references": [
+                "azurerm_resource_group.rg.location",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "name": {
+              "constant_value": "stodevnorhcentralusxy"
+            },
+            "resource_group_name": {
+              "references": [
+                "azurerm_resource_group.rg.name",
+                "azurerm_resource_group.rg"
+              ]
+            },
+            "tags": {
+              "references": [
+                "var.tags"
+              ]
+            }
+          },
+          "schema_version": 3
+        }
+      ],
+      "variables": {
+        "tags": {
+          "description": "The Tags"
+        }
+      }
+    }
+  },
+  "relevant_attributes": [
+    {
+      "resource": "azurerm_resource_group.rg",
+      "attribute": [
+        "name"
+      ]
+    },
+    {
+      "resource": "azurerm_resource_group.rg",
+      "attribute": [
+        "location"
+      ]
+    }
+  ]
+}

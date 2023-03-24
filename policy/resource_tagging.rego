@@ -20,6 +20,7 @@ not_allow[msg] {
 
 deny_missing_tags[msg] {
 	resource := tfplan.resource_changes[_]
+    resource.change.after.tags
 	resource_tags := {t | some t; resource.change.after.tags[t]}
 	missing_tags := mandatory_tags - resource_tags
 	count(missing_tags) > 0
