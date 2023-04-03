@@ -1,0 +1,17 @@
+name: 'Terraform Conftest Action'
+description: 'Action that runs conftest against Terraform Plans'
+inputs:
+  planjson:
+    required: true
+    description: 'The path to the plan.json file to test'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - test
+    - ${{ inputs.planjson }}
+
+branding:
+  icon: 'layers'
+  color: 'green'
