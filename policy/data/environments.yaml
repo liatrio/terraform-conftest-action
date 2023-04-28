@@ -4,5 +4,7 @@ environments:
 - prod
 - test
 - staging
+- stg
 - sandbox
+- sbx
 - dr
