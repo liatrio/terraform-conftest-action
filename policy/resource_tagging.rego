@@ -15,10 +15,10 @@ mandatory_tags := {x | x = mandatory_tags_list[_]}
 
 # Missing Tags
 not_allow[msg] {
-	deny_missing_tags[msg]
+	warn_missing_tags[msg]
 }
 
-deny_missing_tags[msg] {
+warn_missing_tags[msg] {
 	resource := tfplan.resource_changes[_]
     resource.change.after.tags
 	resource_tags := {t | some t; resource.change.after.tags[t]}
@@ -30,10 +30,10 @@ deny_missing_tags[msg] {
 
 # Cost Center
 not_allow[msg] {
-	deny_cost_center[msg]
+	warn_cost_center[msg]
 }
 
-deny_cost_center[msg] {
+warn_cost_center[msg] {
 	resource := tfplan.resource_changes[_]
 	cost_center := resource.change.after.tags.CostCenter
 	not cost_center in cost_centers
@@ -43,10 +43,10 @@ deny_cost_center[msg] {
 
 # Automation
 not_allow[msg] {
-	deny_automation_enabled_yesno[msg]
+	warn_automation_enabled_yesno[msg]
 }
 
-deny_automation_enabled_yesno[msg] {
+warn_automation_enabled_yesno[msg] {
 	resource := tfplan.resource_changes[_]
 	yn := resource.change.after.tags.AutomationEnabled
 	not yn in ["yes", "no"]
