@@ -9,7 +9,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - test
     - ${{ inputs.planjson }}
 
 branding:
