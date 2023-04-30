@@ -4,4 +4,4 @@ COPY policy        /policy
 COPY tests         /tests
 COPY conftest.toml /conftest.toml
 
-ENTRYPOINT ["conftest", "-c", "/conftest.toml", "-p", "/policy", "-d", "/policy/data"]
+ENTRYPOINT ["conftest", "-c", "/conftest.toml", "test", "-p", "/policy", "-d", "/policy/data"]
