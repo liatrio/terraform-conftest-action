@@ -1,1 +1,2 @@
 data = "policy/data"
+all-namespaces = true
